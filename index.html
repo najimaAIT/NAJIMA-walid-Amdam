@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini-site collaboratif</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Équipe — Mini-site collaboratif</h1>
+    <p>Chaque personne prend en charge une partie : HTML, CSS, JS.</p>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <form id="addForm" aria-label="Ajouter collaborateur">
+        <input type="text" id="name" placeholder="Nom" required />
+        <input type="text" id="role" placeholder="Rôle (ex: designer, dev, PM)" required />
+        <button type="submit">Ajouter</button>
+      </form>
+
+      <div class="filter">
+        <input type="text" id="filterInput" placeholder="Filtrer par rôle..." />
+        <button id="clearBtn">Effacer</button>
+      </div>
+    </section>
+
+    <section id="cards" class="cards" aria-live="polite">
+      <!-- Cartes générées par JS -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Projet de collaboration — pratique Git / branches / merges</small>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
